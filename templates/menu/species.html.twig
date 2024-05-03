@@ -1,0 +1,43 @@
+{# templates/menu_principal/species.html.twig #}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
+    <title>Detalles de Especies</title>
+</head>
+<body>
+    <h1>Detalles de la Especie</h1>
+    <header>
+        <a href="{{ path('menu') }}"> {# Reemplaza 'index' con la ruta de tu página de inicio en Symfony #}
+            <img src="{{ asset('') }}" alt="">
+        </a>
+        <nav>
+            <a href="{{ path('menu') }}">inicio</a>
+            <a href="{{ path('species') }}">especie</a>
+            <a href="{{ path('starships') }}">naves</a>
+            <a href="{{ path('perfil_estudiante') }}">perfil</a>
+
+
+
+        </nav>
+    </header>
+
+    {% if species is defined %}
+        <div class="species-info"> {# Clase para diseño personalizado #}
+            <h2>{{ species.name }}</h2>
+            <ul>
+                <li><strong>Clasificación:</strong> {{ 'mamífero' }}</li>
+                <li><strong>Designación:</strong> {{ 'sentiente' }}</li>
+                <li><strong>Altura Media:</strong> {{ '210' }} cm</li>
+                <li><strong>Esperanza de Vida:</strong> {{ '400' }} años</li>
+                <li><strong>Lenguaje:</strong> {{ 'Shyriiwook' }}</li>
+            </ul>
+        </div>
+    {% else %}
+        <p>No se encontraron detalles de especies.</p>
+    {% endif %}
+    
+</body>
+</html>

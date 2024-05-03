@@ -1,0 +1,55 @@
+{# perfil_estudiante.html.twig #}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
+    <title>Perfil de Estudiante</title>
+</head>
+<body>
+    <header>
+        <h1>Perfil de Estudiante</h1>
+    </header>
+    <header>
+        <a href="{{ path('menu') }}"> {# Reemplaza 'index' con la ruta de tu página de inicio en Symfony #}
+            <img src="{{ asset('') }}" alt="">
+        </a>
+        <nav>
+            <a href="{{ path('menu') }}">inicio</a>
+            <a href="{{ path('species') }}">especie</a>
+            <a href="{{ path('starships') }}">naves</a>
+            <a href="{{ path('perfil_estudiante') }}">perfil</a>
+
+
+
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Información del estudiate </h2>
+            <ul>
+                <li><strong>Nombre:</strong> {{ 'Alejandro Jheremi' }}</li>
+                <li><strong>Edad:</strong> {{ '22' }}</li>
+                <li><strong>Correo Electrónico:</strong> {{ 'alejitomer@gmail.com' }}</li>
+                <li><strong>Dirección:</strong> {{ 'Blanco Galindo' }}</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Información sobre su estudio</h2>
+            <ul>
+                {# Define las variables aquí #}
+                {% set universidad = 'Universidad Ucatec' %}
+                {% set carrera = 'Ingeniería de sistemas' %}
+                {% set fecha_inicio = '12/09/2022' %}
+                {% set fecha_graduacion = '01/07/2027' %}
+                
+                <li><strong>Universidad:</strong> {{ universidad }}</li>
+                <li><strong>Carrera:</strong> {{ carrera }}</li>
+                <li><strong>Fecha de Inicio:</strong> {{ fecha_inicio }}</li>
+                <li><strong>Fecha de Graduación Prevista:</strong> {{ fecha_graduacion }}</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

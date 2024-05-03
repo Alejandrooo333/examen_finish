@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/estilos.css') }}"> 
+    <title>MENU PRINCIPAL</title>
+</head>
+<body>
+    <header>
+        <a href="{{ path('menu') }}"> {# Reemplaza 'index' con la ruta de tu página de inicio en Symfony #}
+            <img src="{{ asset('') }}" alt="">
+        </a>
+        <nav>
+            <a href="{{ path('menu') }}">inicio</a>
+            <a href="{{ path('species') }}">especie</a>
+            <a href="{{ path('starships') }}">naves</a>
+            <a href="{{ path('perfil_estudiante') }}">perfil</a>
+
+
+
+        </nav>
+    </header>
+
+    <section class="introduction">
+        <h1>MENU INICIO</h1>
+    </section>
+
+   
+
+    <!-- container cards  -->
+    <div class="container">
+    </div>
+
+   
+</body>
+</html>
+
